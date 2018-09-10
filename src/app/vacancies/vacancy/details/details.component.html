@@ -1,0 +1,25 @@
+<p>
+  details works!
+</p>
+<table class="table table-hover">
+  <thead>
+  <tr>
+      <td>Title</td>
+      <td>Experience</td>
+      <td>Company Name</td>
+      <td>Location</td>
+      <td colspan="4">Actions</td>
+  </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+          <td>{{ vacancies.name }}</td>
+          <td>{{ vacancies.description }}</td>
+          <td>{{ vacancies.price }}</td>
+          <td>{{ vacancies.currency }}</td>
+           <td><a [routerLink]="['edit', vacancies.id]" class="btn btn-primary">Edit</a></td>
+          <td><button (click)= "deleteVacancy(vacancies.id)" class="btn btn-danger">Delete</button></td>
+         </tr>
+  </tbody>
+</table>
